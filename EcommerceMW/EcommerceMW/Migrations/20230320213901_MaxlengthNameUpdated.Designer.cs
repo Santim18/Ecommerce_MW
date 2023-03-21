@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EcommerceMW.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20230315033144_IndexName_CountriesTb1")]
-    partial class IndexName_CountriesTb1
+    [Migration("20230320213901_MaxlengthNameUpdated")]
+    partial class MaxlengthNameUpdated
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,8 +39,8 @@ namespace EcommerceMW.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 

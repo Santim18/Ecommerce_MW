@@ -5,7 +5,7 @@
 namespace EcommerceMW.Migrations
 {
     /// <inheritdoc />
-    public partial class MaxLength_NameUpdated : Migration
+    public partial class MaxlengthNameUpdated : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,8 +17,8 @@ namespace EcommerceMW.Migrations
                 maxLength: 50,
                 nullable: false,
                 oldClrType: typeof(string),
-                oldType: "nvarchar(10)",
-                oldMaxLength: 10);
+                oldType: "nvarchar(100)",
+                oldMaxLength: 100);
         }
 
         /// <inheritdoc />
@@ -27,8 +27,8 @@ namespace EcommerceMW.Migrations
             migrationBuilder.AlterColumn<string>(
                 name: "Name",
                 table: "Countries",
-                type: "nvarchar(10)",
-                maxLength: 10,
+                type: "nvarchar(100)",
+                maxLength: 100,
                 nullable: false,
                 oldClrType: typeof(string),
                 oldType: "nvarchar(50)",
